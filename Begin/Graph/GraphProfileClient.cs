@@ -87,29 +87,32 @@ namespace DotNetCoreRazor_MSGraph.Graph
 
         public async Task<string> GetPresenceCssClass()
         {
-            var presence = await GetUserPresence();
-            if (presence == null)
-            {
-                return "label-default";
-            }
+            // var presence = await GetUserPresence();
+            // if (presence == null)
+            // {
+            //     return "label-default";
+            // }
 
-            UserPresence userPresence = Enum.Parse<UserPresence>(presence.Availability);
+            // UserPresence userPresence = Enum.Parse<UserPresence>(presence.Availability);
 
-            switch (userPresence)
-            {
-                case UserPresence.Available:
-                    return "border-success";
-                case UserPresence.Away:
-                case UserPresence.Busy:
-                case UserPresence.Offline:
-                case UserPresence.Unknown:
-                case UserPresence.Invisible:
-                case UserPresence.DoNotDisturb:
-                case UserPresence.Meeting:
-                    return "border-danger";
-                default:
-                    return "border-secondary";
-            }
+            // switch (userPresence)
+            // {
+            //     case UserPresence.Available:
+            //         return "border-success";
+            //     case UserPresence.Away:
+            //     case UserPresence.Busy:
+            //     case UserPresence.Offline:
+            //     case UserPresence.Unknown:
+            //     case UserPresence.Invisible:
+            //     case UserPresence.DoNotDisturb:
+            //     case UserPresence.Meeting:
+            //         return "border-danger";
+            //     default:
+            //         return "border-secondary";
+            // }
+
+            return "label-default";
+            
         }
 
     }
